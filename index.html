@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Buat Kamuu</title>
+    <style>
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .popup-image {
+            max-width: 100%;
+            max-height: 60vh;
+            margin-bottom: 10px;
+        }
+
+        #nextButton {
+            font-size: 18px;
+            padding: 10px 20px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-container" id="imagePopup">
+        <img src="" alt="Popup Image" class="popup-image">
+        <br>
+        <button id="nextButton">Coba kamu pencet ini</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imagePopup = document.getElementById("imagePopup");
+            const popupImage = imagePopup.querySelector(".popup-image");
+            const nextButton = document.getElementById("nextButton");
+
+            const images = [
+                "/image1.jpg",
+                "/image2.jpg"
+            ];
+
+            let currentImageIndex = 0;
+
+            // Show the image popup
+            function showImagePopup() {
+                popupImage.src = images[currentImageIndex];
+                imagePopup.style.display = "block";
+            }
+
+            // Hide the image popup
+            function hideImagePopup() {
+                imagePopup.style.display = "none";
+            }
+
+            // Show next alert and hide the image popup
+            function showNextAlert() {
+                hideImagePopup();
+                if (currentImageIndex < images.length - 1) {
+                    currentImageIndex++;
+                    alert("happy valentine bub!");
+                    alert("happy valentine bub!");
+                    alert("happy valentine bub!");
+                    showImagePopup();
+                } else {
+                    alert("Sekian dari aku terimakasih");
+                }
+            }
+
+            // Show the first alert
+            alert("Hallo farah!");
+            alert("gimana? udah caper ke mamahku?")
+            alert("i love u so much by")
+            alert("keep going ya")
+            alert("kamu nambah 1 semester gapapa koo sayang itu bukan  salah kamu")
+            alert("Semangat ngejar dosennya cantik")
+            alert("makasih ya udah dukung aku terus")
+            alert("makasih banget udah sayang ama aku")
+            alert("makasih banget udah mencintai aku dengan sepenuhnya")
+            alert("aku tuh sayang banget sama kamu tapi aku gengsi")
+            alert("i love u")
+            alert("i love u")
+            alert("semangat ngejar dosennya")
+            alert(
+                "idup itu bukan perlombaan jadi gada yang cepet gada yang lambat, semua orang punya jalurnya masing masing farah")
+            alert("sorry gabisa ngasih apa apa, soalnya aku lagi gada uwang")
+            alert("nanti kalau aku gajian aku kasih makanan ya")
+            alert("menurutku kamu udah jadi part of my life, maaf ya aku cuek cuek")
+            alert("soalnya aku banyak banget kerjaannya dan tugasnya")
+            alert("aku lg berat banget")
+            alert("makasih sudah support aku")
+            alert("happy valentine bub!")
+            alert("i wish we meet in every valentine")
+            alert("happy valentine");
+            alert("makasih sayang");
+            showImagePopup();
+
+            // Set up next button click event
+            nextButton.addEventListener("click", showNextAlert);
+        });
+    </script>
+</body>
+
+</html>
